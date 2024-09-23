@@ -158,7 +158,7 @@ function wget_and_untar {
   local DIR=$2
   mkdir -p "${DIR}"
   pushd "${DIR}"
-  curl -L "${URL}" > $2.tar.gz
+  curl -kL "${URL}" > $2.tar.gz
   tar -xz --strip-components=1 -f $2.tar.gz
   popd
 }
